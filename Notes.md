@@ -10,26 +10,24 @@
 
 ## The Data:
 
-##### 2019-2020. Print. Keyword='United States Politics and Government'.
+##### 2020. Print. Keyword='United States Politics and Government'.
 
 ![Number of Op-Ed and News articles](img/oped_news_hist.png)
 
 ---
 ## The Model:
-stop_words = NONE
+stop_words = ['a','b','c','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 ## Model Performance: 
 
 ![Confusion Matrix](img/confusion_matrix.png)
 
-accuracy = 0.9241499564080209
-recall = 0.9293478260869565
-precision = 0.6979591836734694
-tn:889 fp:74 fn:13 tp:171
+accuracy = 0.942458587619878
+recall = 0.9021739130434783
+precision = 0.7757009345794392
+tn:915 fp:48 fn:18 tp:166
 
 ## Analysis:
-
-###### Important features: Many features are political and are causing the model to predict based on topic, not sentiment. 
 
 ![Important Features](img/feature_imporance.png)
 
