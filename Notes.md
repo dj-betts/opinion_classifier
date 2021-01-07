@@ -16,17 +16,16 @@
 
 ---
 ## The Model:
-stop_words = ['said']
-
+stop_words = NONE
 
 ## Model Performance: 
 
 ![Confusion Matrix](img/confusion_matrix.png)
 
-accuracy = 0.9162162162162162
-recall = 0.9036458333333334
-precision = 0.6995967741935484
-tn:1687 fp:149 fn:37 tp:347
+accuracy = 0.9241499564080209
+recall = 0.9293478260869565
+precision = 0.6979591836734694
+tn:889 fp:74 fn:13 tp:171
 
 ## Analysis:
 
@@ -38,7 +37,3 @@ tn:1687 fp:149 fn:37 tp:347
 
 ## Next Steps:
 
-##### 1. Engineer data sets that control for the topic to discover features that differentiate bias in a specific topic. (eg. classifying political Op-Ed from news stories about politics. Connect model results to EDA.
-##### 2. Optimize RF
-##### 3. Build a [XGBoost] (https://xgboost.readthedocs.io/en/latest/#)
-##### 5. Flask app interactivity. 
