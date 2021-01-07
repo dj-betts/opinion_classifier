@@ -12,7 +12,7 @@
 
 ##### 2019-2020. Print. Keyword='United States Politics and Government'.
 
-![Number of Op-Ed and News articles](img/num_opednews_2019.png)
+![Number of Op-Ed and News articles](img/oped_news_hist.png)
 
 ---
 ## The Model:

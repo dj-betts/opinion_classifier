@@ -29,9 +29,11 @@ def metrics_(tn, fp, fn, tp):
 
 #returns shape of news and oped
 def oped_v_news(df):
-    news_df = df[df.type_of_material == "News"]
-    oped_df = df[df.type_of_material == "Op-Ed"]
-    print(f"news shape:{news_df.shape}, oped shape:{oped_df.shape}, ratio: {oped_df.shape[0]/news_df.shape[0]}")
+    df.type_of_material.hist()
+    news = sum(df.type_of_material == "News")
+    oped = sum(df.type_of_material == "Op-Ed")
+    print(f'News: {news} Oped: {oped}, Total: {oped+news}, Op-Ed {round(oped/(oped+news), 2)} of total')
+    #plt.savefig('../img/oped_news_hist.png')
 
 #change News stories that had mislabeled section name
 def change_oped(x):
