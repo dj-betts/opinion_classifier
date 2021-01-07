@@ -16,17 +16,17 @@
 
 ---
 ## The Model:
-stop_words = ['a','b','c','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'mr','ms', 'said']
+stop_words = ['said']
 
 
 ## Model Performance: 
 
 ![Confusion Matrix](img/confusion_matrix.png)
 
-accuracy = 0.8272626931567328
-recall = 0.8388671875
-precision = 0.2686053783614759
-tn:11133 fp:2339 fn:165 tp:859
+accuracy = 0.9162162162162162
+recall = 0.9036458333333334
+precision = 0.6995967741935484
+tn:1687 fp:149 fn:37 tp:347
 
 ## Analysis:
 
