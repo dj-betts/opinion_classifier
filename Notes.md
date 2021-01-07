@@ -31,7 +31,7 @@ tn:11133 fp:2339 fn:165 tp:859
 
 ###### Important features: Many features are political and are causing the model to predict based on topic, not sentiment. 
 
-![Important Features](img/confusion_matrix.png)
+![Important Features](img/feature_imporance.png)
 
 
 
