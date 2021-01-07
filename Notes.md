@@ -10,12 +10,13 @@
 
 ## The Data:
 
-##### In 2019, the New York Times published 41,748 articles, not all of them were published in print. I obtained metadata from each article via the TImes Archive API, and scrapped each URL for the body of each article. In total, my final corpus of documents was 26,472 News articles and 2,012 Op-Ed articles. 
+##### 2019-2020. Print. Keyword='United States Politics and Government'.
 
 ![Number of Op-Ed and News articles](img/num_opednews_2019.png)
 
 ---
 ## The Model:
+stop_words = ['a','b','c','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'mr','ms', 'said']
 
 
 ## Model Performance: 

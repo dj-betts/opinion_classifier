@@ -40,8 +40,24 @@ def change_oped(x):
     else:
         x.type_of_material
 
+#returns articles w/ 'United States Politics and Government' as a keyword
 def return_pol_gov(row):
     list_dict = eval(row.keywords)
     for (dic) in (list_dict):
         if dic.get('value') == 'United States Politics and Government':
             return True
+        
+def filter_keyword(df):
+    df['United States Politics and Government'] = df.apply(return_pol_gov, axis=1)    
+    df = df[df['United States Politics and Government'] == True]
+    oped_v_news(df)
+    return df
+
+#function that removes string.punctuation w/out the '?'
+def punc_strip(document):
+    for char in document:
+        if char in '!"#$%&\'()*+—,-./:;<=>?@[\\]^_`{|}~”’':
+            document = document.replace(char, " ") 
+    return document
+
+stop_words = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','mr','ms','said']
