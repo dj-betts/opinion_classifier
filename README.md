@@ -10,30 +10,54 @@
 
 ## The Data:
 
-##### In 2019, the New York Times published 41,748 articles, not all of them were published in print. I obtained metadata from each article via the TImes Archive API, and scrapped each URL for the body of each article. In total, my final corpus of documents was 26,472 News articles and 2,012 Op-Ed articles. 
+##### 2020. Print. Keyword='United States Politics and Government'. word_net.lemmetizer
 
-![Number of Op-Ed and News articles](img/num_opednews_2019.png)
+![Number of Op-Ed and News articles](img/oped_news_hist.png)
+
+## The Vectorizer:
+
+Number of features: 1088, Numbers of stop words: 42854
+analyzer: word
+binary: False
+decode_error: strict
+dtype: <class 'numpy.float64'>
+encoding: utf-8
+input: content
+lowercase: True
+max_df: 0.9
+max_features: None
+min_df: 0.1
+ngram_range: (1, 1)
+norm: l2
+preprocessor: <function punc_strip at 0x7fafefad9050>
+smooth_idf: True
+stop_words: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+strip_accents: None
+sublinear_tf: False
+token_pattern: (?u)\b\w\w+\b
+tokenizer: <function wordnet_tokenize at 0x7fafefaef560>
+use_idf: True
+vocabulary: None
 
 ---
+## The Model:
+
 
 ## Model Performance: 
 
-![Confusion Matrix](img/conf_matx.png)
+![Confusion Matrix](img/confusion_matrix.png)
+
+Accuracy: 0.94
+Recall: 0.9
+Precision: 0.78
+TN:915 FP:48 FN:18 TP:166
 
 ## Analysis:
 
-###### Important features: Many features are political and are causing the model to predict based on topic, not sentiment. 
-
-![Important Features](img/important_feat_bar.png)
+![Important Features](img/feature_imporance.png)
 
 
 
 ## Next Steps:
+.do full year of printed material.
 
-##### 1. Engineer data sets that control for the topic to discover features that differentiate bias in a specific topic. (eg. classifying political Op-Ed from news stories about politics. Connect model results to EDA.
-##### 2. Optimize RF
-##### 3. Build a [XGBoost](https://xgboost.readthedocs.io/en/latest/#)
-##### 5. Flask app interactivity. 
-
-![normalize for true](img/norm_true.png)
-![normalize for pred](img/norm_pred.png)
