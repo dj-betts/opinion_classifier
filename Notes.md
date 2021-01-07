@@ -16,7 +16,7 @@
 
 ## The Vectorizer:
 
-Number of features: 1088, Numbers of stop words: 42854
+Number of features: 2013, Numbers of stop words: 41929
 analyzer: word
 binary: False
 decode_error: strict
@@ -24,18 +24,18 @@ dtype: <class 'numpy.float64'>
 encoding: utf-8
 input: content
 lowercase: True
-max_df: 0.9
+max_df: 0.95
 max_features: None
-min_df: 0.1
+min_df: 0.05
 ngram_range: (1, 1)
 norm: l2
-preprocessor: <function punc_strip at 0x7fafefad9050>
+preprocessor: <function punc_strip at 0x7fd82bd30e60>
 smooth_idf: True
 stop_words: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 strip_accents: None
 sublinear_tf: False
 token_pattern: (?u)\b\w\w+\b
-tokenizer: <function wordnet_tokenize at 0x7fafefaef560>
+tokenizer: <function wordnet_tokenize at 0x7fd82bd30950>
 use_idf: True
 vocabulary: None
 
@@ -48,9 +48,9 @@ vocabulary: None
 ![Confusion Matrix](img/confusion_matrix.png)
 
 Accuracy: 0.94
-Recall: 0.9
-Precision: 0.78
-TN:915 FP:48 FN:18 TP:166
+Recall: 0.92
+Precision: 0.75
+TN:906 FP:57 FN:14 TP:170
 
 ## Analysis:
 
@@ -60,4 +60,5 @@ TN:915 FP:48 FN:18 TP:166
 
 ## Next Steps:
 .do full year of printed material.
+.play w/ document frequency. 
 
