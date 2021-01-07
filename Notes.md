@@ -10,22 +10,47 @@
 
 ## The Data:
 
-##### 2020. Print. Keyword='United States Politics and Government'.
+##### 2020. Print. Keyword='United States Politics and Government'. word_net.lemmetizer
 
 ![Number of Op-Ed and News articles](img/oped_news_hist.png)
 
+## The Vectorizer:
+
+Number of features: 1088, Numbers of stop words: 42854
+analyzer: word
+binary: False
+decode_error: strict
+dtype: <class 'numpy.float64'>
+encoding: utf-8
+input: content
+lowercase: True
+max_df: 0.9
+max_features: None
+min_df: 0.1
+ngram_range: (1, 1)
+norm: l2
+preprocessor: <function punc_strip at 0x7fafefad9050>
+smooth_idf: True
+stop_words: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+strip_accents: None
+sublinear_tf: False
+token_pattern: (?u)\b\w\w+\b
+tokenizer: <function wordnet_tokenize at 0x7fafefaef560>
+use_idf: True
+vocabulary: None
+
 ---
 ## The Model:
-stop_words = ['a','b','c','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
 
 ## Model Performance: 
 
 ![Confusion Matrix](img/confusion_matrix.png)
 
-accuracy = 0.942458587619878
-recall = 0.9021739130434783
-precision = 0.7757009345794392
-tn:915 fp:48 fn:18 tp:166
+Accuracy: 0.94
+Recall: 0.9
+Precision: 0.78
+TN:915 FP:48 FN:18 TP:166
 
 ## Analysis:
 
@@ -34,4 +59,5 @@ tn:915 fp:48 fn:18 tp:166
 
 
 ## Next Steps:
+.do full year of printed material.
 
