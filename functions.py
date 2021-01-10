@@ -33,7 +33,7 @@ def oped_v_news(df):
     news = sum(df.type_of_material == "News")
     oped = sum(df.type_of_material == "Op-Ed")
     print(f'News: {news} Oped: {oped}, Total: {oped+news}, Op-Ed {round(oped/(oped+news), 2)} of total')
-    #plt.savefig('../img/oped_news_hist.png')
+    #plt.savefig('img/oped_news_hist.png')
 
 #change News stories that had mislabeled section name
 def change_oped(x):
