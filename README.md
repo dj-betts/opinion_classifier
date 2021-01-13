@@ -26,9 +26,7 @@ ngram_range: (1, 1)
 
 stop_words: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'see', 'all', 'much', 'if', 'many', 'former', 'chief', 'spokesman']
 
-
 tokenizer: <function wordnet_tokenize at 0x7fafefaef560>
-
 
 ---
 ## Model:
