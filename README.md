@@ -4,7 +4,7 @@
 
 I have always been fascinated by language, history, and media. During a childhood family vacation to Washington DC, I was mesmerized by the actualization of The Library of Congress, a building devoted to American artifacts. I was inspired at seeing family names handwritten in a fancy, enormous microfilm projector at The National Archives. 
 
-Founded in 1851, The New York Times has long been regarded within the industry as our national "newspaper of records". As the city and our nation has matured and suffered, progressed and regressed, experienced solidarity and schism; every day has been recorded by the journalists of The New York Times. Over nearly two centuries, the Times has daily turned current events into American History. And though America’s memory is short, the language we use today has been formed by this historical record.
+Founded in 1851, The New York Times has long been regarded within the industry as our national "newspaper of record". As the city and our nation has matured and suffered, progressed and regressed, experienced solidarity and schism; every day has been recorded by the journalists of The New York Times. Over nearly two centuries, the Times has daily turned current events into American History. And though America’s memory is short, the language we use today has been formed by this historical record.
 
 ### Motivation 
 
