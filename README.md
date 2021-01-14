@@ -12,7 +12,7 @@ The modern New Yorker is bombarded with news and opinion from multiple sources v
 
 ###  Goal
 
-With the use of NLP and ML my goal is to gain insights into ways this formative document informs and influences its readers and use those insights to classify opinion from news.
+With the use of NLP and ML my goal is to gain insights into ways this formative document informs and influences and use those insights to classify opinion from news.
 
 <hr>
 
