@@ -48,9 +48,9 @@ With the use of NLP and ML my goal is to gain insights into ways this formative 
 ![Confusion Matrix](img/confusion_matrix.png)
 ![Important Features](img/feature_imporance.png)
 
-*Accuracy: 0.92*
-*Recall: 0.9*
-*Precision: 0.72*
+* Accuracy: 0.9
+* Recall: 0.9
+* Precision: 0.72
 
 ### Analysis:
 
