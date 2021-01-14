@@ -8,21 +8,24 @@ Founded in 1851, The New York Times has long been regarded within the industry a
 
 ### Motivation 
 
-The modern New Yorker is bombarded with news and opinion from multiple sources via multiple formats via multiple mediums. This modern benifit has made it all but impossible for readers to understand which messages are meant to inform, and which are meant to influence. The modern problem is that the signal is being lost in the noise.
+The modern New Yorker is bombarded with news and opinion from multiple sources via multiple formats via multiple mediums. This modern benefit has made it all but impossible for readers to understand which messages are meant to inform, and which are meant to influence. The modern problem is that the signal is being lost in the noise.
 
 ###  Goal
 
-With the use of NLP and ML my goal is to gain insights into ways this formative document informs and influeces its readers and use those insights to classify opinion from news.
+With the use of NLP and ML my goal is to gain insights into ways this formative document informs and influences its readers and use those insights to classify opinion from news.
 
 <hr>
 
 ## Data:
 
-##### 2017-2020. Printed. Keyword='United States Politics and Government'.
-
+##### 2017-2020. Printed. Keyword='United States Politics and Government'. 
 ![Number of Op-Ed and News articles](img/oped_news_hist.png)
 
 ### Data Engineering: 
+* Extracted quotations marks 
+* Deleted Capitalized words
+* Repalced apostrophe punctuaiton
+
 
 
 ### TF-IDF Vectorizer:
