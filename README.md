@@ -29,14 +29,14 @@ With the use of NLP and ML my goal is to gain insights into ways this formative 
 
 **Number of features: 56122, Numbers of stop words: 42**
 
-*max_df: 0.9*
-*max_features: None*
-*min_df: 0.1*
-*ngram_range: (1, 1)*
+* max_df: 0.9
+* max_features: None
+* min_df: 0.1
+* ngram_range: (1, 1)
 
-*stop_words: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'see', 'all', 'much', 'if', 'many', 'former', 'chief', 'spokesman']*
+* stop_words: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'see', 'all', 'much', 'if', 'many', 'former', 'chief', 'spokesman']*
 
-*tokenizer: <function wordnet_tokenize at 0x7fafefaef560>*
+* tokenizer: <function wordnet_tokenize at 0x7fafefaef560>
 
 <hr>
 
