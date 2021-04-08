@@ -15,7 +15,11 @@ from nltk.corpus import stopwords
 def df_printed(file):
     print_cols = ['_id','print_page','pub_date','keywords','type_of_material','lead_paragraph','text']    
     df = pd.read_csv(file, usecols=print_cols, index_col='_id', low_memory=False)
+    
+    #remove articles that do NOT have a printed page, meaning that these articles were NOT printed, but published online.
     df = df[df.print_page.isna() == False]
+    
+    #remove articles that did not have text. Ex: podcast place holders
     df = df[~df.text.isna() == True]
     return df
 
@@ -23,9 +27,9 @@ def df_printed(file):
 def vectorize_y_ser(ser):
     y = ser.copy()
     y.replace({'Op-Ed': 1,'News': 0}, inplace=True)
-    print(y.head())
+    return y
 
-#rate of correct predictions out of total predictions
+# rate of correct predictions out of total predictions
 def metrics_(tn, fp, fn, tp):
     accuracy = (tp + tn) / (tn + fn + tp + fp)
     print(f'Accuracy: {round(accuracy, 2)}')
@@ -34,7 +38,7 @@ def metrics_(tn, fp, fn, tp):
     precision = (tp) / (tp + fp)
     print(f'Precision: {round(precision, 2)}')
     print(f'TN:{tn} FP:{fp} FN:{fn} TP:{tp}')
-    return (accuracy, recall, precision)
+#    return (accuracy, recall, precision)
 
 #returns articles w/ 'United States Politics and Government' as a keyword
 def return_pol_gov(row):
@@ -48,7 +52,7 @@ def filter_keyword(df, keyword='United States Politics and Government'):
     df = df[df[keyword] == True]
     return df
 
-#prints number of features, stop words and parameters for vectorizer
+#p rints number of features, stop words and parameters for vectorizer
 def print_vector_params(vectorizer):
     #features
     feat_names = vectorizer.get_feature_names()
