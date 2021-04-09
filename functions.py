@@ -23,6 +23,20 @@ def df_printed(file):
     df = df[~df.text.isna() == True]
     return df
 
+#returns articles w/ 'United States Politics and Government' as a keyword
+#keywords is a column in NYT API
+def return_keyword(row, value='United States Politics and Government'):
+    list_dict = eval(row.keywords)
+    for (dic) in (list_dict):
+        if dic.get('value') == value:
+            return True
+        
+#value from previous function is used as a key in this function
+def filter_keyword(df, keyword='United States Politics and Government'):
+    df[keyword] = df.apply(return_keyword, axis=1)
+    df = df[df[keyword] == True]
+    return df
+                
 # function to vectorize the type_of_material series into a y target vector.
 def vectorize_y_ser(ser):
     y = ser.copy()
@@ -40,19 +54,7 @@ def metrics_(tn, fp, fn, tp):
     print(f'TN:{tn} FP:{fp} FN:{fn} TP:{tp}')
 #    return (accuracy, recall, precision)
 
-#returns articles w/ 'United States Politics and Government' as a keyword
-def return_pol_gov(row):
-    list_dict = eval(row.keywords)
-    for (dic) in (list_dict):
-        if dic.get('value') == 'United States Politics and Government':
-            return True
-
-def filter_keyword(df, keyword='United States Politics and Government'):
-    df[keyword] = df.apply(return_pol_gov, axis=1)
-    df = df[df[keyword] == True]
-    return df
-
-#p rints number of features, stop words and parameters for vectorizer
+#prints number of features, stop words and parameters for vectorizer
 def print_vector_params(vectorizer):
     #features
     feat_names = vectorizer.get_feature_names()
@@ -69,7 +71,8 @@ def print_vector_params(vectorizer):
     for key, val in params.items():
         print(f'{key}: {val}')
 
-#returns shape of news and oped
+#returns quick check of balance
+#shape and histogram of news and oped
 #safe fig also included.
 def oped_v_news(df):
     df.type_of_material.hist()
@@ -98,7 +101,7 @@ def filter_keyword(df, keyword='United States Politics and Government'):
     df = df[df[keyword] == True]
     return df
 
-#remove capitalized words such as first words of sentences. proper nouns.
+#remove capitalized words EX: first words of sentences. proper nouns.
 def remove_cap_words(row):
     temp = row.split()
     for i, word in enumerate(temp):
@@ -112,6 +115,7 @@ def punc_strip(doc):
     for char in word_tokenize(doc):
         if char in '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~—':
             doc = doc.replace(char, " ")
+        #I decided the easiest way to deal with various contractions was to delete all apostrophes 
         if char == "’":
             doc = doc.replace(char, "")
     return doc
@@ -167,6 +171,8 @@ def return_quote_list(document):
 def return_article(document):
     article = []
     quote_list = []
+    #start count of quotes just because
+    quote_count = 0
     
     open_quote = "“"
     close_quote = "”"
@@ -178,7 +184,8 @@ def return_article(document):
         quote = string.split(open_quote)
         article.append(quote.pop(0))
         quote_list += quote
-    
+        quote_count += 1
+        
     article = " ".join(article)
     quotation = " ".join(quote_list)
     
